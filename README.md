@@ -1,34 +1,15 @@
-# Тестовое задание PHP
+# About
 
-## Исходные данные
-
-Некий сервис, в нем есть пользователи, у них есть баланс лицевого счета.
-На вход сервис получает операция пополение или списания лицевого счета
-(в сервисе принято называть их транзакциями).
-Сервис обрабатывает около 100000 транзакции в день. 
-
-В репозитарии имеются все нужные начальные данные
-  - Миграции
-  - Seed
-
-### Разрешено
- - использовать любые инструменты в рамках php или БД 
- - добавлять, модифицировать таблицы 
- - добавлять, модифицировать поля в таблицах.
-
-## Требуется
-  - реализовать метод добавления транзакции.
-  - реализовать метод отмены транзакции.
-  - реализовать метод получения баланса пользователя.
-  - формат взаимодейсвие с сервисом в JSON; 
-
-### Плюсом будет:
-  - объясните почему Вы сделали именно так;
-  - использование docker-compose;
-  - использованиен Swagger;
-  - использование PHPDoc;
-  - внимательность;
-  - чистота кода;
-  - наличие .env
+Simple API application built with lumen and swagger.
 
 
+# How to run
+
+Run `composer install` to install dependencies
+
+Run `php artisan swagger-lume:publish-views` to publish views (resources/views/vendor/swagger-lume)
+Run `php artisan swagger-lume:publish` to publish everything
+Run `php artisan swagger-lume:generate` to generate docs
+
+Run `php artisan migrate` to migrate DB
+Run `php artisan db:seed` to seed DB
